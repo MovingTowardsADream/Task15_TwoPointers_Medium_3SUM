@@ -12,9 +12,7 @@ public:
         sort(nums.begin(), nums.end());
         for (int i = 0;i < n-2;i++) {
             if (nums[i] + nums[i + 1] + nums[i + 2] > 0) break;
-            /*the beginning element is bigger than 0, directly break the loop*/
             if (nums[i] + nums[n - 1] + nums[n - 2] < 0) continue;
-            /*the beginning element add to the most largest element and the element largest element you get result, if result is negative, no reason to calculate*/
             if (i > 0 && nums[i] == nums[i - 1]) continue;
             l = i + 1;
             r = n - 1;
